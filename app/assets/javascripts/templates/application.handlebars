@@ -1,0 +1,20 @@
+<h1>MetroFuture ...in ACTION!</h1>
+<div class="layout">
+	<ul>
+		<li class="sidebar">
+			<h1>Search</h1>
+			<div>
+				{{view Ember.Select prompt="Status:" content=status valueBinding=statusChoice}} <br />
+				{{view Ember.Select prompt="Geography:" content=geography valueBinding=geographyChoice}} <br />
+				{{view Ember.Select prompt="Lead Dept" content=leadDept valueBinding=leadDeptChoice}} <br />
+				<br />
+				<button {{action 'submitParameters' statusChoice geographyChoice leadDeptChoice}}>Search</button>
+			</div>
+			{{outlet}}
+		</li>
+		<li class="map-container">
+			<div id="map"></div>
+			{{view App.MapView}}
+		</li>
+	</ul>
+</div>
