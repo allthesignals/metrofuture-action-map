@@ -4,15 +4,14 @@ console.log(App.gon.subRegions)
 App.ProjectsController = Ember.ArrayController.extend
 	queryParams: ['geography', 'leadDept', 'status']
 
-	status: App.gon.status
-	geography: App.gon.geography
-	leadDept: App.gon.leadDept
+	status: App.seeds.status
+	geography: App.seeds.geography
+	leadDept: App.seeds.leadDept
 
 	actions:
 		submitParameters: (statusChoice, geographyChoice, leadDeptChoice) ->
 
-			@transitionToRoute 'projects', 
-				geographyChoice
+			@transitionToRoute 'projects'
 
 			# @store.find 'project', 
 			# 	geography: @geographyChoice
