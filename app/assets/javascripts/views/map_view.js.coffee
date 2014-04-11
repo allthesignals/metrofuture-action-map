@@ -12,16 +12,20 @@ App.MarkerCollectionLayer = EmberLeaflet.MarkerCollectionLayer.extend(
   itemLayerClass: App.MarkerLayer
 )
 
-App.MapView = EmberLeaflet.MapView.extend(
-	center: L.latLng(42.3455, -71.1505),
-	zoom: 18,
-	options: 
-		maxZoom: 19, 
-		minZoom: 0
-	childLayers: [
-	  EmberLeaflet.DefaultTileLayer
-	  App.MarkerCollectionLayer
-])
+App.ApplicationView = EmberLeaflet.MapView.extend
+	didInsertElement: -> 
+		view = this
+		map = L.map(@$("#map").get(0)).setView([
+		  42.373611
+		  -71.110556
+		], 12)
+		L.tileLayer("http://{s}.tile.stamen.com/toner-background/{z}/{x}/{y}.png",
+		  attribution: "Map tiles by <a href=\"http://stamen.com\">Stamen Design</a>, <a href=\"http://creativecommons.org/licenses/by/3.0\">CC BY 3.0</a> &mdash; Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>"
+		  subdomains: "abcd"
+		  minZoom: 0
+		  maxZoom: 20
+		).addTo map
+
 
 # App.MapView = Ember.View.extend(
 #   cartoDbUser: "cspanring"

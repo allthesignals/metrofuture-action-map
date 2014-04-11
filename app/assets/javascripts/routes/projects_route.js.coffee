@@ -2,6 +2,6 @@
 
 App.ProjectsRoute = Ember.Route.extend
 	model: (params) -> 
-		@store.find 'project',
-			params.queryParams
+			@store.find 'project',
+				params.queryParams
 
