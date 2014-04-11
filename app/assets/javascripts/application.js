@@ -14,8 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require handlebars
-//= require lib/emberEnv.js
-//= require lib/ember-canary.js
+//= require ember
 //= require lib/ember-data.js
 //= require lib/leaflet-src.js
 //= require lib/ember-leaflet.min.js

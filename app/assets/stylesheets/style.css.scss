@@ -1,5 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
-@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+// @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+// @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
 
 body {
 	margin: 0;
@@ -39,10 +39,10 @@ h1 {
 	}
 }
 
-.search {
-	width: 100%;
-}
-
 .results {
 	width: 100%;
+
+	.result {
+		width: 240px;
+	}
 }
