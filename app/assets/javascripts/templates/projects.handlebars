@@ -8,7 +8,7 @@
 	{{#each}}
 	<div class="result">
 		<p>{{status}}</p>
-		<p>{{title}}</p>
+		<p>{{#link-to 'project' this }} {{title}} {{/link-to}}</p>
 	</div>
 	{{/each}}
 

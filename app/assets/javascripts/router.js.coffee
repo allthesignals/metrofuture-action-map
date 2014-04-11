@@ -1,7 +1,8 @@
 # For more information see: http://emberjs.com/guides/routing/
 
 App.Router.map ->
-	@resource 'projects'
-		# path: '/projects/:dynamic'
+	@resource 'projects', ->
+		@resource 'project',
+			path: ':project_id'
 
 
